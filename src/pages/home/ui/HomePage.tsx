@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '../../../shared/assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './HomePage.css'
 
-function App() {
+export function HomePage() {
   const [count, setCount] = useState(0)
 
   return (
@@ -18,11 +18,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((current) => current + 1)}>
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit <code>src/pages/home/ui/HomePage.tsx</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
@@ -31,5 +31,3 @@ function App() {
     </>
   )
 }
-
-export default App
