@@ -1,10 +1,14 @@
-import { Outlet } from 'react-router-dom'
+import type { ReactNode } from 'react'
 
-export function AppShell() {
+type AppShellProps = {
+  children: ReactNode
+}
+
+export function AppShell({ children }: AppShellProps) {
   return (
     <div className="app-shell">
       <main className="app-shell__content">
-        <Outlet />
+        {children}
       </main>
     </div>
   )
